@@ -15,6 +15,6 @@ export class AuthService {
     let { email, password } = user;
     let username = email;
 
-    return this._http.post<User>('https://pacific-crag-63120.herokuapp.com/users/authenticate', { username, password });
+    return this._http.post<User>(`${this.baseUrl}/users/authenticate`, { username, password });
   }
 }
