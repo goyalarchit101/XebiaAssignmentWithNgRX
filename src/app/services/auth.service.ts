@@ -13,6 +13,8 @@ export class AuthService {
 
   loginIn(user: User) {
     let { email, password } = user;
-    return this._http.post<User>(`${this.baseUrl}/login`, {email, password});
+    let username = email;
+    // return this._http.post<User>(`${this.baseUrl}/login`, {email, password});
+    return this._http.post<User>('https://fast-plateau-82390.herokuapp.com/users/authenticate', { username, password });
   }
 }
