@@ -17,7 +17,7 @@ export class LogInComponent implements OnInit {
   loginFrom: FormGroup;
   state: Observable<any>;
   error: any;
-  constructor(private fb: FormBuilder, private store: Store<IAppState>) { 
+  constructor(private fb: FormBuilder, private store: Store<IAppState>) {
     this.state = this.store.select(selectAuthState);
   }
 

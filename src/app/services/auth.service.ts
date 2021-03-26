@@ -12,8 +12,8 @@ export class AuthService {
 
 
   loginIn(user: User) {
-    let { email, password } = user;
-    let username = email;
+    const { email, password } = user;
+    const username = email;
 
     return this._http.post<User>(`${this.baseUrl}/users/authenticate`, { username, password });
   }
